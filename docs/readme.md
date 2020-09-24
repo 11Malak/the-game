@@ -1,18 +1,27 @@
 ![](https://pataruco.github.io/ga-assets/assets/logos/ga.svg)
+​
 
 # Projecto #1: El Juego
 
+​
+
 ## Visión general
 
+​
 Comencemos con algo divertido: **¡un juego!**
 Todos tendrán la oportunidad de **ser creativos** y superar algunos **desafíos de programación realmente difíciles**; dado que ya te has mojado los pies con JavaScript, depende de ti crear un programa divertido e interesante
 **Trabajarás individualmente para este proyecto**, pero te guiaremos a lo largo del proceso y te ayudaremos a medida que avanza.
+​
 
 ---
 
+​
+
 ## Requerimientos técnicos
 
+​
 Tu aplicación debe:
+​
 
 - **Renderizar un juego en el navegador**
 - **Diseño de lalógica para ganar** y **mostrar visualmente qué jugador ganó**
