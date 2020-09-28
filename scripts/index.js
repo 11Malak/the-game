@@ -18,42 +18,60 @@ for (let index = 0; index < cellCount; index++) {
   cells.push(cell);
 }
 
-let BPosition = 89;
+//initial state alien and human
+let AHUMANTANKPosition = 94;
+let YTANKSHOTPosition = 94;
+//const V = false;
 
-const addB = (index) => cells[index].classList.add('B-ENEMY-ALIENBATTLESHIP');
-const removeB = (index) =>
-  cells[index].classList.remove('B-ENEMY-ALIENBATTLESHIP');
+//Ditribution
+const addA = (index) => cells[index].classList.add('AHUMANTANK');
+const removeA = (index) => cells[index].classList.remove('AHUMANTANK');
+
+const addB = (index) => cells[index].classList.add('AHUMANTANK');
+const removeB = (index) => cells[index].classList.remove('AHUMANTANK');
+
+/*switch (key) {
+  case 'SpaceBar':
+    V = true;
+    if (y > 0) {
+      YPosition = YPosition - height;
+    }
+    break;
+    default:
+      console.log('Eso no es una flecha flaco');
+      break;
+  }*/
+
+/*if (V == true) {
+  const addY = (index) => cells[index].classList.add('Y-HUMAN ROCKET');
+  const removeY = (index) => cells[index].classList.remove('Y-HUMAN-ROCKET');
+}*/
 
 const handleKeyPress = (event) => {
   const { key } = event;
 
-  const x = BPosition % 10;
-  const y = Math.floor(BPosition / 10);
+  const x = AHUMANTANKPosition % 10;
+  //const y = Math.floor(BPosition / 10);
+
+  /*const x = YPosition % 10;
+  const y = Math.floor(YPosition / 10);*/
 
   // 3 - Mover a Bchu de un cuadro al otro dependiendo la orientación y la dirección
   //  3.1  ¿Cómo puedo saber en que coordenas Bchu se encuentra?
 
-  removeB(BPosition);
+  removeA(AHUMANTANKPosition);
+
+  //removeY(YPosition);
 
   switch (key) {
-    case 'ArrowUp':
-      if (y > 0) {
-        BPosition = BPosition - width;
-      }
-      break;
     case 'ArrowRight':
       if (x < width - 1) {
-        BPosition++;
-      }
-      break;
-    case 'ArrowDown':
-      if (y < width - 1) {
-        BPosition = BPosition + width;
+        AHUMANTANKPosition++;
       }
       break;
     case 'ArrowLeft':
       if (x > 0) {
-        BPosition--;
+        AHUMANTANKPosition--;
       }
 
       break;
@@ -61,9 +79,9 @@ const handleKeyPress = (event) => {
       console.log('Eso no es una flecha flaco');
       break;
   }
-  addB(BPosition);
+  addA(AHUMANTANKPosition);
 };
 
-addB(BPosition);
+addA(AHUMANTANKPosition);
 
 window.addEventListener('keyup', handleKeyPress);

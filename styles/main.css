@@ -2,18 +2,16 @@
   box-sizing: border-box;
 }
 
-img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
-picture {
-  display: block;
-}
 body {
   height: 100vh;
   margin: 0;
+}
+
+.grid-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid {
@@ -34,15 +32,15 @@ body {
   width: 10%;
 }
 
-.grid-wrapper {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.grid div.AHUMANTANK {
+  background-image: url('../images/A-PlayerHumanTank.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
 }
 
-.grid div .B-ENEMY-ALIENBATTLESHIP {
-  background-image: url('./images/A-PlayerHumanTank.png');
+.grid div.TANKSHOT {
+  background-image: url('../images/W>Y-TankShot.png');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
