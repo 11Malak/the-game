@@ -45,3 +45,17 @@ body {
   background-size: contain;
   cursor: pointer;
 }
+
+.grid div.EVANGUARDALIEN {
+  background-image: url('../images/E-VANGUARDALIEN.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.ALIENEXPLOSION {
+  background-image: url('../images/ALIENEXPLOSION.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}

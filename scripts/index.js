@@ -18,9 +18,12 @@ for (let index = 0; index < cellCount; index++) {
   cells.push(cell);
 }
 
+let aliendeath = [];
+
 //initial state alien and human
 let AHUMANTANKPosition = 94;
 let YTANKSHOTPosition = AHUMANTANKPosition;
+let EVANGUARDALIENPosition = 44;
 //const V = false;
 
 //Ditribution
@@ -30,23 +33,17 @@ const removeA = (index) => cells[index].classList.remove('AHUMANTANK');
 const addY = (index) => cells[index].classList.add('YTANKSHOT');
 const removeY = (index) => cells[index].classList.remove('YTANKSHOT');
 
-/*switch (key) {
-  case 'SpaceBar':
-    V = true;
-    if (y > 0) {
-      YPosition = YPosition - height;
-    }
-    break;
-    default:
-      console.log('Eso no es una flecha flaco');
-      break;
-  }*/
+const addE = (index) => cells[index].classList.add('EVANGUARDALIEN');
+const removeE = (index) => cells[index].classList.remove('EVANGUARDALIEN');
 
-/*if (V == true) {
-  const addY = (index) => cells[index].classList.add('Y-HUMAN ROCKET');
-  const removeY = (index) => cells[index].classList.remove('Y-HUMAN-ROCKET');
-}*/
+const addX = (index) => cells[index].classList.add('ALIENEXPLOSION');
+const removeX = (index) => cells[index].classList.remove('ALIENEXPLOSION');
 
+const EVANGUARDALIENTimming = width;
+const EVANGUARDALIENExplosion = EVANGUARDALIENTimming % 2;
+let ALIENEXPLOSIONPosition = EVANGUARDALIENPosition;
+
+addE(EVANGUARDALIENPosition);
 const handleKeyPress = (event) => {
   const { key } = event;
 
@@ -71,21 +68,30 @@ const handleKeyPress = (event) => {
       }
       break;
 
-    case 'SpaceBar':
-      if (YTANKSHOTPosition > width) {
-        setInterval(() => {
+    case 'w':
+      setInterval(() => {
+        removeY(YTANKSHOTPosition);
+        YTANKSHOTPosition -= width;
+        addY(YTANKSHOTPosition);
+        console.log('LASER-MOVIENDOSE');
+        console.log('hola');
+        if (cells[YTANKSHOTPosition].classList.contains('EVANGUARDALIEN')) {
+          clearInterval();
           removeY(YTANKSHOTPosition);
-          YTANKSHOTPosition -= width;
-          addY(YTANKSHOTPosition);
-          console.log('LASER-MOVIENDOSE');
-          if (YTANKSHOTPosition < width) {
-            clearInterval(YTANKSHOTPosition);
-          }
-        }, 500);
-      }
+          removeE(EVANGUARDALIENPosition);
+          console.log('hey');
+          addX(ALIENEXPLOSIONPosition);
+          removeX(ALIENEXPLOSIONPosition);
+          console.log('k ase');
+        }
+        if (YTANKSHOTPosition < width) {
+          removeY(YTANKSHOTPosition);
+          clearInterval();
+          console.log('aqui');
+        }
+      }, 500);
       break;
   }
-
   addA(AHUMANTANKPosition);
 };
 addA(AHUMANTANKPosition);
