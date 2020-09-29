@@ -39,7 +39,11 @@ body {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .grid div.YTANKSHOT {
+=======
+.grid div.TANKSHOT {
+>>>>>>> 7d469cd2e2c3bc9d07e1e277c38f97d568457f7e
   background-image: url('../images/W>Y-TankShot.png');
   background-repeat: no-repeat;
   background-size: contain;
