@@ -44,11 +44,32 @@ const EVANGUARDALIENExplosion = EVANGUARDALIENTimming % 2;
 let ALIENEXPLOSIONPosition = EVANGUARDALIENPosition;
 
 addE(EVANGUARDALIENPosition);
+
+const shoot = (AHUMANTANKPosition) => {
+  let YTANKSHOTPosition = AHUMANTANKPosition;
+  const interval = setInterval(() => {
+    removeY(YTANKSHOTPosition);
+    YTANKSHOTPosition -= width;
+    addY(YTANKSHOTPosition);
+    if (cells[YTANKSHOTPosition].classList.contains('EVANGUARDALIEN')) {
+      clearInterval(interval);
+      removeY(YTANKSHOTPosition);
+      removeE(EVANGUARDALIENPosition);
+      addX(ALIENEXPLOSIONPosition);
+      removeX(ALIENEXPLOSIONPosition);
+    }
+    if (YTANKSHOTPosition < width) {
+      removeY(YTANKSHOTPosition);
+      clearInterval(interval);
+    }
+  }, 500);
+};
+
 const handleKeyPress = (event) => {
   const { key } = event;
 
   const x = AHUMANTANKPosition % 10;
-  let YTANKSHOTPosition = AHUMANTANKPosition;
+  // let YTANKSHOTPosition = AHUMANTANKPosition;
   // 3 - Mover a Bchu de un cuadro al otro dependiendo la orientación y la dirección
   //  3.1  ¿Cómo puedo saber en que coordenas Bchu se encuentra?
 
@@ -69,27 +90,7 @@ const handleKeyPress = (event) => {
       break;
 
     case 'w':
-      setInterval(() => {
-        removeY(YTANKSHOTPosition);
-        YTANKSHOTPosition -= width;
-        addY(YTANKSHOTPosition);
-        console.log('LASER-MOVIENDOSE');
-        console.log('hola');
-        if (cells[YTANKSHOTPosition].classList.contains('EVANGUARDALIEN')) {
-          clearInterval();
-          removeY(YTANKSHOTPosition);
-          removeE(EVANGUARDALIENPosition);
-          console.log('hey');
-          addX(ALIENEXPLOSIONPosition);
-          removeX(ALIENEXPLOSIONPosition);
-          console.log('k ase');
-        }
-        if (YTANKSHOTPosition < width) {
-          removeY(YTANKSHOTPosition);
-          clearInterval();
-          console.log('aqui');
-        }
-      }, 500);
+      shoot(AHUMANTANKPosition);
       break;
   }
   addA(AHUMANTANKPosition);
