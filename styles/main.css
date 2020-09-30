@@ -39,12 +39,36 @@ body {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 .grid div.YTANKSHOT {
-=======
-.grid div.TANKSHOT {
->>>>>>> 7d469cd2e2c3bc9d07e1e277c38f97d568457f7e
   background-image: url('../images/W>Y-TankShot.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.EVANGUARDALIEN {
+  background-image: url('../images/Ex22.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.EVANGUARDALIENB {
+  background-image: url('../images/E2x22.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.DMIDLANERALIEN {
+  background-image: url('../images/Dx22.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.ALIENEXPLOSION {
+  background-image: url('../images/ALIENEXPLOSION.png');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
