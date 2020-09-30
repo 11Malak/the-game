@@ -57,7 +57,6 @@ const shoot = (AHUMANTANKPosition) => {
     if (cells[YTANKSHOTPosition].classList.contains('EVANGUARDALIEN')) {
       clearInterval(interval);
       cells[YTANKSHOTPosition].classList.remove('YTANKSHOT');
-
       cells[YTANKSHOTPosition].classList.remove('EVANGUARDALIEN');
       cells[YTANKSHOTPosition].classList.add('ALIENEXPLOSION');
       setTimeout(

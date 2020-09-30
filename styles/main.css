@@ -68,7 +68,7 @@ body {
 }
 
 .grid div.ALIENEXPLOSION {
-  background-image: url('../images/ALIENEXPLOSION.png');
+  background-image: url('../images/explosion.png');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
