@@ -46,6 +46,13 @@ body {
   cursor: pointer;
 }
 
+.grid div.XALIENSHOT {
+  background-image: url('../images/W>X-AlienShot.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
 .grid div.EVANGUARDALIEN {
   background-image: url('../images/Ex22.png');
   background-repeat: no-repeat;
@@ -69,6 +76,13 @@ body {
 
 .grid div.ALIENEXPLOSION {
   background-image: url('../images/explosion.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid div.HUMANEXPLOSION {
+  background-image: url('../images/HumanTankExplosion.gif');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
