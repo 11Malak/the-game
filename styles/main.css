@@ -5,6 +5,15 @@
 body {
   height: 100vh;
   margin: 0;
+  background-color: black;
+}
+
+.grid-wrapper {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-wrapper {
@@ -26,7 +35,6 @@ body {
 }
 
 .grid div {
-  border: 1px solid lightgrey;
   flex-grow: 1;
   height: 10%;
   width: 10%;
@@ -44,13 +52,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
-}
-
-.grid div.XALIENSHOT {
-  background-image: url('../images/W>X-AlienShot.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
+  background-position: center;
 }
 
 .grid div.EVANGUARDALIEN {
@@ -58,6 +60,10 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
+}
+span {
+  font-size: 43px;
+  color: green;
 }
 
 .grid div.EVANGUARDALIENB {
@@ -74,15 +80,23 @@ body {
   cursor: pointer;
 }
 
+.grid div.XALIENSHOT {
+  background-image: url('../images/W>X-AlienShot.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  background-position: center;
+}
+
 .grid div.ALIENEXPLOSION {
-  background-image: url('../images/explosion.png');
+  background-image: url('../images/AlienExplosion.png');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 }
 
 .grid div.HUMANEXPLOSION {
-  background-image: url('../images/HumanTankExplosion.gif');
+  background-image: url('../images/explosion.png');
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
